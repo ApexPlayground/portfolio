@@ -1,0 +1,301 @@
+/* ===============================
+   Global Theme Variables
+================================ */
+:root {
+  /* Primary Brand Colors - Professional Blue */
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e40af;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  /* Terminal (Light Mode) */
+  --terminal-bg: #f8fafc;
+  --terminal-text: #1e293b;
+  --terminal-header-bg: #e2e8f0;
+  --terminal-title: #64748b;
+
+  /* Text (Light Mode) */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+}
+
+[data-theme="dark"] {
+  /* Primary Brand Colors (Dark) - Vibrant Blue */
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  /* Terminal (Dark Mode) */
+  --terminal-bg: #0f172a;
+  --terminal-text: #e2e8f0;
+  --terminal-header-bg: #1e293b;
+  --terminal-title: #94a3b8;
+
+  /* Text (Dark Mode) */
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #cbd5e1;
+}
+
+/* ===============================
+   Layout & Hero Section
+================================ */
+.layout {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+[data-theme="dark"] .layout {
+  background: #020617;
+}
+
+.hero--primary {
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary) 0%,
+    var(--ifm-color-primary-darker) 100%
+  );
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+  color: var(--text-primary);
+}
+
+.hero__subtitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  color: var(--text-primary);
+}
+
+/* ===============================
+   Buttons
+================================ */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: "SF Mono", Monaco, monospace;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.button--secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.button--outline {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.button--lg {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: var(--text-primary);
+}
+
+.button--secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.button--outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===============================
+   Terminal
+================================ */
+.terminal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .terminal {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: var(--terminal-header-bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .terminal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.terminal-button.red {
+  background: #ef4444;
+}
+.terminal-button.yellow {
+  background: #f59e0b;
+}
+.terminal-button.green {
+  background: #10b981;
+}
+
+.terminal-title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--terminal-title);
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  background: inherit;
+  color: inherit;
+  overflow-y: auto;
+}
+.terminal-body pre {
+  margin: 0;
+  font-family: inherit;
+}
+
+/* ===============================
+   Stats Grid
+================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: "SF Mono", Monaco, monospace;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .hero__title {
+    font-size: 2.2rem;
+  }
+  .terminal {
+    max-width: 100%;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
