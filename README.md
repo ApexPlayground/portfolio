@@ -1,41 +1,23 @@
-# Website
+# Divine Eboigbe Portfolio
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A documentation-style portfolio website showcasing projects in **software development, cloud engineering, and cloud security**.
 
-## Installation
+## Live Demo
 
-```bash
-yarn
-```
+[https://apexplayground.com](https://apexplayground.com)
 
-## Local Development
+## Tech Stack
 
-```bash
-yarn start
-```
+- Docusaurus
+- React
+- CSS
+- Markdown
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+## Running Locally
 
 ```bash
-yarn build
+git clone https://github.com/ApexPlayground/portfolio.git
+cd portfolio
+npm install
+npm start
 ```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
