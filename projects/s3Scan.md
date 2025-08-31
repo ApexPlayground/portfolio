@@ -21,16 +21,33 @@ A CLI tool to **scan AWS S3 buckets for security misconfigurations**. Built with
 
 ## Technology
 
-- **Python 3.12** – main language
-- **Click** – for building the CLI
-- **Boto3** – AWS SDK for Python
-- **LocalStack** – optional local testing environment
+- **Python 3.12**: main language
+- **Click**: for building the CLI
+- **Boto3**: AWS SDK for Python
+- **LocalStack**: optional local testing environment
 
 ---
 
-## Example Usage
+## Usage
+
+The CLI works with both **real AWS** and **LocalStack** (local testing).
+
+- **AWS:** Uses your configured AWS credentials (`~/.aws/credentials`) or environment variables.
+- **LocalStack:** Specify the `--endpoint-url` to point to your local instance.
+
+---
+
+### Example: Auditing a Bucket (LocalStack)
+
+Before running commands, make sure **LocalStack is running** and your AWS credentials are configured (you only need to do this once per terminal session).
 
 ```bash
-# Audit a bucket
-python cli.py audit --bucket my-bucket
+# Start LocalStack (S3 service)
+localstack start
+
+# Audit a bucket in LocalStack
+python3 s3scan/cli.py audit \
+    --bucket my-bucket \
+    --endpoint-url http://localhost:4566 \
+    --region us-east-1
 ```
