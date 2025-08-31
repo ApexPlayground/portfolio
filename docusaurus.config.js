@@ -56,7 +56,7 @@ const config = {
           title: "Navigation",
           items: [
             { label: "About", to: "/about" },
-            { label: "Projects", to: "/projects" },
+            { label: "Projects", to: "/projects/intro" },
           ],
         },
         {
