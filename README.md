@@ -4,7 +4,7 @@ A documentation-style portfolio website showcasing projects in **software develo
 
 ## Live Demo
 
-[https://divineeboigbe.netlify.app/](Website)
+[website](https://divineeboigbe.netlify.app/)
 
 ## Tech Stack
 
