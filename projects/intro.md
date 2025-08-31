@@ -1,7 +1,7 @@
+---
 id: intro
 title: Project Introduction
 sidebar_label: Introduction
-
 ---
 
 # Project Overview
