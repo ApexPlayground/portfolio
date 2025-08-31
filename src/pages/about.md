@@ -17,7 +17,7 @@ I’m a **Cloud Engineer and Cloud Security Specialist** focused on designing **
 
 ## Work Experience Highlights
 
-- **Beacon Hospital — Software Engineer**  
+- **Beacon Hospital(Software Engineer)**  
   Designed and implemented multiple internal systems, including **stock management, dosage calculation, and appointment scheduling**. Developed **secure REST APIs with JWT and role-based access** and optimized database indexes to **improve backend performance**. These solutions enhanced efficiency for **500+ staff** and were delivered in collaboration with clinicians and developers.
 
 - **Client Projects**  
@@ -29,12 +29,12 @@ I’m a **Cloud Engineer and Cloud Security Specialist** focused on designing **
 
   Demonstrated strong **engineering, deployment, and client communication skills** throughout.
 
-- **Startup SaaS App — Localization Feature**  
+- **Startup SaaS App (Localization Feature)**  
   Developed a **multi-language localization system** for a SaaS app to support global users. Built secure APIs and contributed to the app’s architecture to ensure proper integration.
 
 ## Education
 
-- **Griffith College Dublin** — Bachelor of Science in Computer Science, First-Class Honours (1:1)
+- **Griffith College Dublin**: Bachelor of Science in Computer Science, First-Class Honours (1:1)
 
 ---
 
